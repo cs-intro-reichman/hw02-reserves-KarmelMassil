@@ -9,7 +9,7 @@ public class OneOfEachStats1 {
 		int child2 = 0;
 		int child3 = 0;
 		int child4 = 0;
-		int counter = 0;
+		int counter = t;
 		String gender;
 		int t = Integer.parseInt(args[0]);
 		for (int i = 0; i < t; i++) {

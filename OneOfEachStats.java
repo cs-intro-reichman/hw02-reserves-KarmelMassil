@@ -17,7 +17,7 @@ public class OneOfEachStats {
 		int child2 = 0;
 		int child3 = 0;
 		int child4 = 0;
-		int counter = 0;
+		int counter = T;
 		String gender;
 		for (int i = 0; i < T; i++) {
 			double a = generator.nextDouble();
@@ -37,6 +37,7 @@ public class OneOfEachStats {
 			if (child >= 4)     child4++;
 		}
 		double avg = (double) counter / T;
+		System.out.println(counter);
 		System.out.println("Average: " + avg + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + child2);
 		System.out.println("Number of families with 3 children: " + child3);
