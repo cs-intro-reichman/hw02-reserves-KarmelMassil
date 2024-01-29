@@ -13,7 +13,40 @@ public class OneOfEachStats {
 		int T = Integer.parseInt(args[0]);
 		int seed = Integer.parseInt(args[1]);
 		// Initailizes a random numbers generator with the given seed value
-        Random generator = new Random(seed);  
+        Random generator = new Random(seed); 
+		int child2 = 0;
+		int child3 = 0;
+		int child4 = 0;
+		int counter = 0;
+		String gender;
+		for (int i = 0; i < T; i++) {
+			double a = generator.nextDouble();
+			if (a <= 0.5) gender = "g";
+			else          gender = "b";
+			String bg = gender;
+			int child = 0;
+			while (bg == gender) {
+				counter++;
+				child++;
+				double b = generator.nextDouble();
+				if (b <= 0.5) gender = "g";
+			    else          gender = "b";
+			}
+			if (child == 2)    child2++;
+			if (child == 3)    child3++;
+			if (child >= 4)     child4++;
+		}
+		double avg = (double) counter / T;
+		System.out.println("Average: " + avg + " children to get at least one of each gender.");
+		System.out.println("Number of families with 2 children: " + child2);
+		System.out.println("Number of families with 3 children: " + child3);
+		System.out.println("Number of families with 4 or more children: " + child4);
+		if (child2 > child3 && child2 > child4)
+		System.out.println("The most common number of children is 2");
+		else if (child3 >= child2 && child3 > child4)
+		System.out.println("The most common number of children is 3");
+		else if (child4 >= child2 && child4 >= child3)
+		System.out.println("The most common number of children is 4 or more"); 
 		
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();

@@ -4,6 +4,18 @@
  */
 public class Reverse {
 	public static void main (String[] args){
-		//// Put your code here
+		String word = args [0];
+		int l = word.length();
+		String str = "";
+		int i = l - 1;
+		while ( i >= 0) {
+			char org = word.charAt (i);
+			str += org;
+			//System.out.println(str);
+			i--;
+		}
+		char mid = word.charAt((l -1 )/ 2);
+		System.out.println(str);
+		System.out.println("The middle character is " + mid);
 	}
 }
