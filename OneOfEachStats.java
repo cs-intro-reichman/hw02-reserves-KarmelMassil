@@ -24,8 +24,8 @@ public class OneOfEachStats {
 			if (a <= 0.5) gender = "g";
 			else          gender = "b";
 			String bg = gender;
-			int child = 0;
-			while (bg == gender) {
+			int child = 1;
+			while (bg.equals(gender)) {
 				counter++;
 				child++;
 				double b = generator.nextDouble();
@@ -42,11 +42,11 @@ public class OneOfEachStats {
 		System.out.println("Number of families with 3 children: " + child3);
 		System.out.println("Number of families with 4 or more children: " + child4);
 		if (child2 > child3 && child2 > child4)
-		System.out.println("The most common number of children is 2");
+		System.out.println("The most common number of children is 2.");
 		else if (child3 >= child2 && child3 > child4)
-		System.out.println("The most common number of children is 3");
+		System.out.println("The most common number of children is 3.");
 		else if (child4 >= child2 && child4 >= child3)
-		System.out.println("The most common number of children is 4 or more"); 
+		System.out.println("The most common number of children is 4 or more."); 
 		
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();
